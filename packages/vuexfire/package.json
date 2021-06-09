@@ -51,11 +51,11 @@
   },
   "homepage": "https://github.com/vuejs/vuefire#readme",
   "devDependencies": {
-    "@posva/vuefire-test-helpers": "^1.2.3",
+    "@posva/vuefire-test-helpers": "file:../@posva/vuefire-test-helpers",
     "vuex": "^4.0.0"
   },
   "dependencies": {
-    "@posva/vuefire-core": "^2.3.4"
+    "@posva/vuefire-core": "file:../@posva/vuefire-core"
   },
   "gitHead": "e3e2df3624572cec86ed861f2472df4d143f2265"
 }
