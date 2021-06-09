@@ -1,4 +1,4 @@
-import Vuex from 'vuex'
+import { createStore } from 'vuex'
 import { firebaseAction, vuexfireMutations } from '../src'
 import { MockFirebase, tick, Vue } from '@posva/vuefire-test-helpers'
 import firebase from 'firebase/app'
@@ -12,7 +12,7 @@ const db = new MockFirebase().child('data')
 describe('RTDB: firebaseAction', () => {
   const item: any = null,
     items: any[] = []
-  const store = new Vuex.Store<{ item: any; items: any[] }>({
+  const store = createStore({
     state: { items, item },
     mutations: vuexfireMutations,
     actions: {

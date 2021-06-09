@@ -1,4 +1,4 @@
-import Vuex from 'vuex'
+import { createStore } from 'vuex'
 import { vuexfireMutations, firestoreAction } from '../src'
 import { db, tick, Vue } from '@posva/vuefire-test-helpers'
 import firebase from 'firebase/app'
@@ -9,7 +9,7 @@ Vue.use(Vuex)
 describe('firestoreAction', () => {
   const item: any = null,
     items: any[] = []
-  const store = new Vuex.Store<{ item: any; items: any[] }>({
+  const store = createStore({
     state: { item, items },
     mutations: vuexfireMutations,
     actions: {
